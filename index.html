@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Explorer</h1>
+        <p>Explore products from a live API</p>
+    </header>
+
+    <main>
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+
+            <select id="sortSelect">
+                <option value="default">Default</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+
+        </section>
+
+        <div id="loading" class="message">
+            Loading products...
+        </div>
+
+        <div id="error" class="message error"></div>
+
+        <section id="productContainer" class="product-container">
+        </section>
+    </main>
+
+    <footer>
+        <p>Raptek Academy Internship Task 5</p>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
